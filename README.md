@@ -1,6 +1,6 @@
 # Astral Warrior
 
-Requires libpng and OpenGL.
+Requires libpng-dev and OpenGL (ie freeglut3-dev)
 
 Game instructions are provided in-game.
 During gameplay, if you cannot see the text in the bottom left,
