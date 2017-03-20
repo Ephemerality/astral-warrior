@@ -91,7 +91,7 @@ bool Game::init()
    * EDIT: While reading through a tutorial, this alpha func was mentioned.
    * It allows you to block out certain colors, but it only allows full opaque or full transparent.
    * If you want semi-transparent, you need to use blending and sort the objects.
-   * That would really suck and isn't needed here, so I switched to the alpha functions.
+   * That isn't needed here, so I switched to the alpha functions.
    */
   glAlphaFunc(GL_GREATER,0.1f);
   glEnable(GL_ALPHA_TEST);
@@ -147,7 +147,7 @@ void Game::checkCollisions(float new_update)
     Mob* ship1 = gameElements.at(0).at(0);
     
     /* If the ship is being drawn and is roughly in the same position as the enemy...
-     * REALLY could use some better collision detection.....
+     * TODO: better collision detection
      */
     if (!ship1->nodraw && enemy->h <= (ship1->pos.h + 4 ) && enemy->h >= (ship1->pos.h - 4) && enemy->az <= (ship1->pos.az + 0.32) && enemy->az >= (ship1->pos.az -0.32 ) ) {
 	//Create an explosion for the enemy
@@ -180,7 +180,7 @@ void Game::checkCollisions(float new_update)
     {
       CylVector* bullet = &(*it)->pos;
       //printf("Bullet: (%f,%f) | Enemy: (%f,%f)\n", bullet->az, bullet->h, enemy->az, enemy->h);
-      //Again, could use better collision detection
+      //TODO: better collision detection
       if( bullet->h <= (enemy->h + 5) && bullet->h >= (enemy->h - 5) && bullet->az <= (enemy->az + 0.2) && bullet->az >= (enemy->az -0.2 ) ) {
 	
 	ParticleSystem* explosion = new ParticleSystem(*enemy, 200);
@@ -219,8 +219,6 @@ void Game::print(string text, GLfloat x, GLfloat y, GLfloat z)
 void Game::startGame()
 {
   //reset the position and drawstate of the ship.
-  //There REALLY needs to better way to access the ship globally through this file...
-  //Seriously...
   gameElements.at(0).at(0)->reset();
   gameElements.at(0).at(0)->nodraw = false;
   p1_score = 0;
