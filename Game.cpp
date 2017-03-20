@@ -1,7 +1,3 @@
-/* Title screen ship credit: http://www.templates.com/blog/wp-content/uploads/2008/09/spaceship-by-joel-carlo.jpg
- * Title screen and game over credit: Amanda Spidle
- */
-
 using namespace std;
 
 #include "Game.h"
@@ -9,9 +5,6 @@ using namespace std;
 /* Define our light variables.
  * These are static and const, so they are not available outside this class
  * and cannot be modified at runtime.
- * They are defined here rather than in the class header for sheer simplicity,
- * as ISO C++ stupidly disallows initialization of variables like this within
- * the header file for the class.
  */
 static const GLfloat light_diffuse[] = {1.0, 1.0, 1.0, 1.0};
 static const GLfloat light_position[] = {1.0, 1.0, 1.0, 0.0}; // infinite light position
