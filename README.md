@@ -1,9 +1,6 @@
-# astral-warrior
-/**************************************************************/
-/*                    ASTRAL WARRIOR                          */
-/*                Created by Nick Niemi                       */
-/*                 Copyright 2009-2017                        */
-/**************************************************************/
+# Astral Warrior
+
+Requires libpng and OpenGL.
 
 Game instructions are provided in-game.
 During gameplay, if you cannot see the text in the bottom left,
